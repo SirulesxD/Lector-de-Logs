@@ -1,0 +1,12 @@
+IP|PUERTO|BD|USUARIO|USOS
+[local]||[unknown]|[unknown]
+[local]||dbaaplicaciones|postgres
+[local]||osdigital|syscobranzadigital
+[local]||dbaplicaciones|postgres
+[local]||osdigital|syscarterasos
+[local]||postgres|sysbcp
+[local]||osdigital|sysbcp
+[local]||sms|sysbcp
+[local]||dbaaplicaciones|sysappdynamics
+[local]||osdigital|sysappdynamics
+[local]||sms|sysappdynamics

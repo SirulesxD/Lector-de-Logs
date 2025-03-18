@@ -16,6 +16,7 @@ namespace Lector_de_Logs
 {
     public partial class Form1 : Form
     {
+        [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -29,7 +30,7 @@ namespace Lector_de_Logs
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String ruta = (String)textBox1.Text;
+            String ruta = (String)TXBRuta.Text;
             string[] archivos;
             string[] resultado = {};
             string txt;
@@ -147,8 +148,21 @@ namespace Lector_de_Logs
 
                 archivosTXT = Directory.GetFiles(ruta, "*" + extension);
 
-                // Mostrar la cantidad de archivos .txt encontrados
-                Escribir($"Se encontraron {archivosTXT.Length} archivos {extension} en la carpeta.");
+                if (archivosTXT.Length == 0) 
+                {
+                    // Mostrar la cantidad de archivos .txt encontrados
+                    Escribir($"Se encontraron {archivosTXT.Length} archivos .txt {extension} en la carpeta.");
+                    Escribir("Buscando archivos .log");
+                    archivosTXT = Directory.GetFiles(ruta, "*" + ".log");
+                    Escribir($"Se encontraron {archivosTXT.Length} archivos .txt {extension} en la carpeta.");
+                    return archivosTXT;
+                }
+                else
+                {
+                    // Mostrar la cantidad de archivos .txt encontrados
+                    Escribir($"Se encontraron {archivosTXT.Length} archivos {extension} en la carpeta.");
+                    return archivosTXT;
+                }
                 
             }
             catch (Exception ex)
@@ -245,6 +259,7 @@ namespace Lector_de_Logs
                             {
                                 case 6:
                                     break;
+                                    // saca ip y puerto
                                 case 0:
                                     {
                                         punto = 0;
@@ -301,6 +316,7 @@ namespace Lector_de_Logs
 
                                         break;
                                     }
+                                    //saca los usuarios y BD
                                 case 1:
                                     {
                                         if (palabras[i][0] == 's' && palabras[i].Length > 2)
@@ -479,6 +495,31 @@ namespace Lector_de_Logs
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buscarRutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "Selecciona la carpeta con los logs";
+
+            if (dialog.ShowDialog() == DialogResult.OK )
+            {
+                string rutaCarpeta = dialog.SelectedPath;
+                this.TXBRuta.Text = rutaCarpeta;
+                this.BTNIniciar.Enabled = true;
+                this.comboBox1.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("No se seleccionó ninguna carpfalsePor favor, seleccione una carpeta valida.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                this.BTNIniciar.Enabled = false;
+                this.comboBox1.Enabled = false;
+            }
         }
     }  
 }

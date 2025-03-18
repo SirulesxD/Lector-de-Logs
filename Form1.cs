@@ -511,14 +511,14 @@ namespace Lector_de_Logs
             {
                 string rutaCarpeta = dialog.SelectedPath;
                 this.TXBRuta.Text = rutaCarpeta;
-                this.BTNIniciar.Enabled = true;
-                this.comboBox1.Enabled = true;
+                //this.BTNIniciar.Enabled = true;
+                //this.comboBox1.Enabled = true;
             }
             else
             {
                 MessageBox.Show("No se seleccionó ninguna carpfalsePor favor, seleccione una carpeta valida.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                this.BTNIniciar.Enabled = false;
-                this.comboBox1.Enabled = false;
+                //this.BTNIniciar.Enabled = false;
+                //this.comboBox1.Enabled = false;
             }
         }
     }  

@@ -47,10 +47,9 @@ namespace Lector_de_Logs
             // BTNIniciar
             // 
             this.BTNIniciar.Enabled = false;
-            this.BTNIniciar.Location = new System.Drawing.Point(15, 95);
-            this.BTNIniciar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BTNIniciar.Location = new System.Drawing.Point(13, 76);
             this.BTNIniciar.Name = "BTNIniciar";
-            this.BTNIniciar.Size = new System.Drawing.Size(84, 29);
+            this.BTNIniciar.Size = new System.Drawing.Size(75, 23);
             this.BTNIniciar.TabIndex = 0;
             this.BTNIniciar.Text = "Iniciar";
             this.BTNIniciar.UseVisualStyleBackColor = true;
@@ -58,48 +57,44 @@ namespace Lector_de_Logs
             // 
             // TXBRuta
             // 
-            this.TXBRuta.Enabled = false;
-            this.TXBRuta.Location = new System.Drawing.Point(16, 60);
-            this.TXBRuta.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TXBRuta.Location = new System.Drawing.Point(14, 48);
             this.TXBRuta.Name = "TXBRuta";
-            this.TXBRuta.Size = new System.Drawing.Size(535, 26);
+            this.TXBRuta.Size = new System.Drawing.Size(476, 22);
             this.TXBRuta.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 36);
+            this.label1.Location = new System.Drawing.Point(11, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 20);
+            this.label1.Size = new System.Drawing.Size(119, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ruta del directorio:";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 150);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Location = new System.Drawing.Point(13, 120);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(535, 456);
+            this.textBox2.Size = new System.Drawing.Size(476, 366);
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Log";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(304, 103);
+            this.label2.Location = new System.Drawing.Point(270, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 20);
+            this.label2.Size = new System.Drawing.Size(135, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Numero de muestras:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(462, 99);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.Location = new System.Drawing.Point(411, 79);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(86, 26);
+            this.textBox3.Size = new System.Drawing.Size(77, 22);
             this.textBox3.TabIndex = 5;
             // 
             // comboBox1
@@ -110,21 +105,20 @@ namespace Lector_de_Logs
             this.comboBox1.Items.AddRange(new object[] {
             ".txt",
             ".log"});
-            this.comboBox1.Location = new System.Drawing.Point(105, 95);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox1.Location = new System.Drawing.Point(93, 76);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 28);
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 6;
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.opcionesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(562, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(500, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -133,21 +127,21 @@ namespace Lector_de_Logs
             this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buscarRutaToolStripMenuItem});
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(103, 29);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.opcionesToolStripMenuItem.Text = "Opciones";
             // 
             // buscarRutaToolStripMenuItem
             // 
             this.buscarRutaToolStripMenuItem.Name = "buscarRutaToolStripMenuItem";
-            this.buscarRutaToolStripMenuItem.Size = new System.Drawing.Size(206, 34);
+            this.buscarRutaToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.buscarRutaToolStripMenuItem.Text = "Buscar Ruta";
             this.buscarRutaToolStripMenuItem.Click += new System.EventHandler(this.buscarRutaToolStripMenuItem_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 619);
+            this.ClientSize = new System.Drawing.Size(500, 495);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label2);
@@ -158,7 +152,6 @@ namespace Lector_de_Logs
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Lector de Logs";
             this.Load += new System.EventHandler(this.Form1_Load);

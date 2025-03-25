@@ -16,13 +16,13 @@ namespace Lector_de_Logs
 {
     public partial class Form1 : Form
     {
-        [STAThread]
+        /*[STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-        }
+        }*/
         public Form1()
         {
             InitializeComponent();
@@ -67,7 +67,6 @@ namespace Lector_de_Logs
 
             if (!Directory.Exists(ruta))
             {
-
                 Escribir("Añadir ruta de la carpeta de logs");
             }
                 else
@@ -189,6 +188,7 @@ namespace Lector_de_Logs
         {
             int punto;
             int c=0;
+            int p = 0;
             int k;
             int v;
             int porcentaje = 0;
@@ -200,6 +200,8 @@ namespace Lector_de_Logs
             string puerto;
             string BD;
             string usuario;
+            string[] id = new string[50001];
+            int idc = 0;
             TimeSpan hora;
 
             if (libro == 0)
@@ -239,6 +241,23 @@ namespace Lector_de_Logs
                             break;
                         }
 
+                        p = 0;
+                        while (id[p] != null)
+                        {
+                            for (int i = 0; i < palabras.Length; i++)
+                            {
+                                if (palabras[i] == id[p])
+                                {
+                                    estado = 3; break;
+                                }
+                            }
+                            if (estado == 3)
+                            {
+                                break;
+                            }
+                            p++;
+                        }
+
                         for (int i = 0; i < palabras.Length; i++)
                         {
                             if (estado == 3)
@@ -259,8 +278,8 @@ namespace Lector_de_Logs
                             {
                                 case 6:
                                     break;
-                                    // saca ip y puerto
                                 case 0:
+                                    // saca ip y puerto
                                     {
                                         punto = 0;
                                         separador = 0;
@@ -316,8 +335,8 @@ namespace Lector_de_Logs
 
                                         break;
                                     }
-                                    //saca los usuarios y BD
                                 case 1:
+                                    //saca los usuarios y BD
                                     {
                                         if (palabras[i][0] == 's' && palabras[i].Length > 2)
                                         {
@@ -328,6 +347,8 @@ namespace Lector_de_Logs
                                                     BD = palabras[i - 1];
                                                     usuario = palabras[i];
                                                     estado = 2;
+                                                    id[idc] = palabras[i + 1];
+                                                    idc++;
                                                 }
                                             }
                                         }
@@ -348,6 +369,8 @@ namespace Lector_de_Logs
                                                                     BD = palabras[i];
                                                                     usuario = palabras[i + 1];
                                                                     estado = 2;
+                                                                    id[idc] = palabras[i + 2];
+                                                                    idc++;
                                                                 }
                                                             }
                                                         }
@@ -356,12 +379,14 @@ namespace Lector_de_Logs
                                                             BD = palabras[i - 1];
                                                             usuario = palabras[i];
                                                             estado = 2;
+                                                            id[idc] = palabras[i + 1];
+                                                            idc++;
                                                         }
                                                     }
                                                 }
                                             }
                                         }
-                                        
+                                        /*
                                         if (palabras[i].IndexOf("[unknown]") > -1)
                                         {
                                             if (palabras[i+1].IndexOf("[unknown]") > -1 )
@@ -382,7 +407,7 @@ namespace Lector_de_Logs
                                                     }
                                                 }
                                             }
-                                        }
+                                        }*/
 
                                         if (palabras[i].IndexOf("postgres") > -1 && i + 1 < palabras.Length)
                                         {
@@ -391,6 +416,9 @@ namespace Lector_de_Logs
                                                 BD = palabras[i];
                                                 usuario = palabras[i + 1];
                                                 estado = 2;
+
+                                                id[idc] = palabras[i + 2];
+                                                idc++;
                                             }
 
                                         }
@@ -487,16 +515,6 @@ namespace Lector_de_Logs
             return t;
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -516,10 +534,17 @@ namespace Lector_de_Logs
             }
             else
             {
-                MessageBox.Show("No se seleccionó ninguna carpfalsePor favor, seleccione una carpeta valida.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("No se seleccionó ninguna carpeta. /n Por favor, seleccione una carpeta valida.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 //this.BTNIniciar.Enabled = false;
                 //this.comboBox1.Enabled = false;
             }
+        }
+
+        private void atrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(); // Crea una instancia de Form1
+            form2.Show(); // Muestra Form1
+            this.Hide(); //O this.Close(); cierra form2.
         }
     }  
 }

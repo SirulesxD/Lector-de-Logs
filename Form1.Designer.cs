@@ -41,12 +41,12 @@ namespace Lector_de_Logs
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarRutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.atrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BTNIniciar
             // 
-            this.BTNIniciar.Enabled = false;
             this.BTNIniciar.Location = new System.Drawing.Point(13, 76);
             this.BTNIniciar.Name = "BTNIniciar";
             this.BTNIniciar.Size = new System.Drawing.Size(75, 23);
@@ -73,7 +73,7 @@ namespace Lector_de_Logs
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(13, 120);
+            this.textBox2.Location = new System.Drawing.Point(12, 117);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(476, 366);
@@ -88,7 +88,6 @@ namespace Lector_de_Logs
             this.label2.Size = new System.Drawing.Size(135, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Numero de muestras:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox3
             // 
@@ -100,7 +99,6 @@ namespace Lector_de_Logs
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Enabled = false;
             this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.comboBox1.Items.AddRange(new object[] {
             ".txt",
@@ -114,7 +112,8 @@ namespace Lector_de_Logs
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcionesToolStripMenuItem});
+            this.opcionesToolStripMenuItem,
+            this.atrasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -133,9 +132,16 @@ namespace Lector_de_Logs
             // buscarRutaToolStripMenuItem
             // 
             this.buscarRutaToolStripMenuItem.Name = "buscarRutaToolStripMenuItem";
-            this.buscarRutaToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.buscarRutaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.buscarRutaToolStripMenuItem.Text = "Buscar Ruta";
             this.buscarRutaToolStripMenuItem.Click += new System.EventHandler(this.buscarRutaToolStripMenuItem_Click);
+            // 
+            // atrasToolStripMenuItem
+            // 
+            this.atrasToolStripMenuItem.Name = "atrasToolStripMenuItem";
+            this.atrasToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.atrasToolStripMenuItem.Text = "Atras";
+            this.atrasToolStripMenuItem.Click += new System.EventHandler(this.atrasToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -154,7 +160,6 @@ namespace Lector_de_Logs
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Lector de Logs";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -174,5 +179,6 @@ namespace Lector_de_Logs
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarRutaToolStripMenuItem;
+        private ToolStripMenuItem atrasToolStripMenuItem;
     }
 }

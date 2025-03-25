@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83ACB01E-C1E4-4AC7-A51E-28A742B6C0EB}|Lector de Logs.csproj|C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{83ACB01E-C1E4-4AC7-A51E-28A742B6C0EB}|Lector de Logs.csproj|c:\\users\\jose.garciaa\\source\\repos\\lector-de-logs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{83ACB01E-C1E4-4AC7-A51E-28A742B6C0EB}|Lector de Logs.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83ACB01E-C1E4-4AC7-A51E-28A742B6C0EB}|Lector de Logs.csproj|c:\\users\\jose.garciaa\\source\\repos\\lector-de-logs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{83ACB01E-C1E4-4AC7-A51E-28A742B6C0EB}|Lector de Logs.csproj|C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83ACB01E-C1E4-4AC7-A51E-28A742B6C0EB}|Lector de Logs.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,28 +58,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\Form1.Designer.cs*",
-              "RelativeToolTip": "Form1.Designer.cs*",
-              "ViewState": "AQIAAFoAAAAAAAAAAIAwwG0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T17:25:43.903Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T16:36:21.367Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\jose.garciaa\\source\\repos\\Lector-de-Logs\\Form1.Designer.cs",
+              "RelativeToolTip": "Form1.Designer.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAIAwwG0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T17:25:43.903Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -91,8 +91,7 @@
               "RelativeToolTip": "Form1.cs*",
               "ViewState": "AQIAAPYBAAAAAAAAAAAswP4BAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T16:35:37.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T16:35:37.296Z"
             }
           ]
         }

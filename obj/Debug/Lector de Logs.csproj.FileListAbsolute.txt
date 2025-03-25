@@ -52,3 +52,14 @@ C:\Users\jose.garciaa\Source\Repos\Lector-de-Logs\obj\Debug\Lector de Logs.cspro
 C:\Users\jose.garciaa\Source\Repos\Lector-de-Logs\obj\Debug\Lector de Logs.csproj.CoreCompileInputs.cache
 C:\Users\jose.garciaa\Source\Repos\Lector-de-Logs\obj\Debug\Lector de Logs.exe
 C:\Users\jose.garciaa\Source\Repos\Lector-de-Logs\obj\Debug\Lector de Logs.pdb
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\bin\Debug\Lector de Logs.exe.config
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\bin\Debug\Lector de Logs.exe
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\bin\Debug\Lector de Logs.pdb
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\obj\Debug\Lector de Logs.csproj.AssemblyReference.cache
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\obj\Debug\Lector_de_Logs.Form1.resources
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\obj\Debug\Lector de Logs.csproj.GenerateResource.cache
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\obj\Debug\Lector de Logs.csproj.CoreCompileInputs.cache
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\obj\Debug\Lector de Logs.exe
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\obj\Debug\Lector de Logs.pdb
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\obj\Debug\Lector_de_Logs.Form2.resources
+C:\Users\jose.garciaa\Desktop\Lector de Logs 5\obj\Debug\Lector_de_Logs.Form3.resources

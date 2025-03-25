@@ -1,0 +1,16 @@
+IP|PUERTO|BD|USUARIO|USOS
+10.30.241.179|1548|infocrediticiacte|sysinfocrediticia|1
+10.30.241.175|58294|infocrediticiacte|sysinfocrediticia|1
+10.30.120.22|17260|postgres|sysappdynamics|1
+[local]||postgres|postgres|4
+[local]||dbaaplicaciones|postgres|3
+10.30.120.22|64048|postgres|sysappdynamics|1
+10.50.71.69|36008|buro|sysburotienda|1
+10.50.71.69|36014|buro|sysburotienda|1
+10.50.71.69|56676|buro|sysburotienda|1
+10.50.71.69|56690|infocrediticiacte|sysinfocrediticia|1
+10.30.241.181|3635|buro|sysburotienda|1
+10.30.120.22|20086|postgres|sysappdynamics|1
+10.30.120.22|20088|postgres|sysappdynamics|1
+10.30.241.169|62345|buro|sysburotienda|1
+10.30.120.22|17264|postgres|sysappdynamics|1

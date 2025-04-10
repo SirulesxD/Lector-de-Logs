@@ -1,0 +1,26 @@
+IP¿PUERTO¿BD¿USUARIO¿ID¿ERROR¿SENTENCIA
+[local]¿¿dbaaplicaciones¿postgres¿939935¿ERROR:  column c.relhasoids does not exist at character 213¿
+[local]¿¿dbaaplicaciones¿postgres¿939957¿ERROR:  relation "sizes_disks" does not exist¿
+[local]¿¿dbaaplicaciones¿postgres¿939971¿ERROR:  relation "info_hardware" does not exist¿
+[local]¿¿sms¿sysbcp¿940259¿ERROR:  column "proisagg" does not exist at character 428¿
+[local]¿¿sms¿sysbcp¿940259¿ERROR:  column "proisagg" does not exist at character 425¿
+[local]¿¿osdigital¿sysetl¿942310¿ERROR:  prepared statement "ST129531DF0" does not exist¿
+[local]¿¿osdigital¿sysoperacioncarteras¿949823¿ERROR:  function timenow() does not exist at character 56¿
+[local]¿¿osdigital¿sysetl¿955659¿ERROR:  relation "metastage_loc_info" does not exist at character 62¿
+[local]¿¿osdigital¿sysetl¿955660¿ERROR:  prepared statement "ST110917B10" does not exist¿
+[local]¿¿osdigital¿sysetl¿955659¿ERROR:  prepared statement "ST1108FCE30" does not exist¿
+[local]¿¿osdigital¿sysetl¿955664¿ERROR:  prepared statement "ST110905290" does not exist¿
+[local]¿¿osdigital¿sysetl¿955663¿ERROR:  prepared statement "ST1108F3490" does not exist¿
+[local]¿¿osdigital¿sysetl¿955672¿ERROR:  prepared statement "ST11093E0B0" does not exist¿
+[local]¿¿osdigital¿sysetl¿955671¿ERROR:  prepared statement "ST11090B590" does not exist¿
+[local]¿¿osdigital¿sysetl¿955679¿ERROR:  prepared statement "ST11094D830" does not exist¿
+[local]¿¿osdigital¿sysetl¿955678¿ERROR:  prepared statement "ST110921150" does not exist¿
+[local]¿¿osdigital¿sysetl¿955684¿ERROR:  prepared statement "ST1108EC130" does not exist¿
+[local]¿¿osdigital¿sysetl¿955683¿ERROR:  prepared statement "ST1108D9790" does not exist¿
+[local]¿¿osdigital¿sysmesaayuda2008¿964363¿ERROR:  column c.relhasoids does not exist at character 245¿
+[local]¿¿osdigital¿sysmesaayuda2008¿964543¿ERROR:  operator does not exist: character varying = integer at character 67¿
+[local]¿¿osdigital¿sysoperacioncarteras¿1086267¿ERROR:  column rel.relhasoids does not exist at character 8¿
+[local]¿¿osdigital¿sysoperacioncarteras¿1086268¿ERROR:  column "datlastsysoid" does not exist at character 132¿
+[local]¿¿osdigital¿sysoperacioncarteras¿1086268¿ERROR:  function pg_last_xlog_receive_location() does not exist at character 283¿
+[local]¿¿osdigital¿sysoperacioncarteras¿1086268¿ERROR:  column "proisagg" does not exist at character 724¿
+[local]¿¿osdigital¿sysoperacioncarteras¿1086268¿ERROR:  column rel.relhasoids does not exist at character 127¿

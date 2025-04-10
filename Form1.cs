@@ -25,6 +25,7 @@ namespace Lector_de_Logs
         }*/
         public Form1()
         {
+            Application.EnableVisualStyles();
             InitializeComponent();
         }
 
@@ -69,7 +70,7 @@ namespace Lector_de_Logs
             {
                 Escribir("Añadir ruta de la carpeta de logs");
             }
-                else
+            else
             {
                 string nombre = "log_" + (i + 1) + "_" + DateTime.Now.ToString("ddMMyyyy") + ".log";
                 try
@@ -101,17 +102,25 @@ namespace Lector_de_Logs
                         i = archivos.Length;
                     }
                 }
-                string[] lineas = File.ReadAllLines(nombre);
-                i = 1;
-                Escribir("Añadiendo total de consultas duplicadas");
-                while (i != x+1 && i < lineas.Length)
-                {
-                    lineas[i] = lineas[i] + "|" + (t[i] + 1).ToString();
-                    i++;
-                }
 
-                Escribir("Muestra obtenida de " + (lineas.Length - 1).ToString());
-                File.WriteAllLines(nombre, lineas);
+                if (File.Exists(nombre))
+                {
+                    string[] lineas = File.ReadAllLines(nombre);
+                    i = 1;
+                    Escribir("Añadiendo total de consultas duplicadas");
+                    while (i != x + 1 && i < lineas.Length)
+                    {
+                        lineas[i] = lineas[i] + "|" + (t[i] + 1).ToString();
+                        i++;
+                    }
+
+                    Escribir("Muestra obtenida de " + (lineas.Length - 1).ToString());
+                    File.WriteAllLines(nombre, lineas);
+                }
+                else
+                {
+                    Escribir("Archivo no creado porque no hubo registros");
+                }
             }
             Escribir("Finaliza el programa");
             Escribir("");
@@ -242,17 +251,11 @@ namespace Lector_de_Logs
                         }
 
                         p = 0;
-                        while (id[p] != null)
+                        while (id[p] != null && linea != null && estado == 0)
                         {
-                            for (int i = 0; i < palabras.Length; i++)
+                            if ((linea.IndexOf(id[p])) > -1)
                             {
-                                if (palabras[i] == id[p])
-                                {
-                                    estado = 3; break;
-                                }
-                            }
-                            if (estado == 3)
-                            {
+                                estado = 3;
                                 break;
                             }
                             p++;
@@ -386,28 +389,6 @@ namespace Lector_de_Logs
                                                 }
                                             }
                                         }
-                                        /*
-                                        if (palabras[i].IndexOf("[unknown]") > -1)
-                                        {
-                                            if (palabras[i+1].IndexOf("[unknown]") > -1 )
-                                            {
-                                                BD = palabras[i];
-                                                usuario = palabras[i+1];
-                                                estado = 2;
-                                            }
-                                            if (palabras[i + 1][0] == 's')
-                                            {
-                                                if (palabras[i + 1][1] == 'y')
-                                                {
-                                                    if (palabras[i + 1][2] == 's')
-                                                    {
-                                                        BD = palabras[i];
-                                                        usuario = palabras[i + 1];
-                                                        estado = 2;
-                                                    }
-                                                }
-                                            }
-                                        }*/
 
                                         if (palabras[i].IndexOf("postgres") > -1 && i + 1 < palabras.Length)
                                         {
@@ -458,7 +439,7 @@ namespace Lector_de_Logs
                                                     string comprobar;
                                                     k = 0;
                                                     v = 0;
-                                                    while ((comprobar = lector2.ReadLine()) != null && k == 0)
+                                                    while ((comprobar = lector2.ReadLine() ) != null && k == 0)
                                                     {
                                                         if (comprobar == ip + "|" + puerto + "|" + BD + "|" + usuario)
                                                         {
@@ -542,9 +523,7 @@ namespace Lector_de_Logs
 
         private void atrasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(); // Crea una instancia de Form1
-            form2.Show(); // Muestra Form1
-            this.Hide(); //O this.Close(); cierra form2.
+            this.Close();// cierra form2.
         }
     }  
 }

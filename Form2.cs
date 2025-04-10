@@ -12,11 +12,12 @@ namespace Lector_de_Logs
 {
     public partial class Form2 : Form
     {
-        //[STAThread]
         public Form2()
         {
             InitializeComponent();
         }
+
+        [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -28,14 +29,16 @@ namespace Lector_de_Logs
         {
             Form1 form1 = new Form1(); // Crea una instancia de Form1
             form1.Show(); // Muestra Form1
-            this.Hide(); //O this.Close(); cierra form2.
+            //this.Hide(); //O
+            //this.Close(); //cierra form2.
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form3 form3 = new Form3(); // Crea una instancia de Form1
             form3.Show(); // Muestra Form1
-            this.Hide(); //O this.Close(); cierra form2.
+            //this.Hide(); //O
+            //this.Close(); //cierra form2.
         }
     }
 }

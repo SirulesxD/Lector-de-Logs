@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Apis.Drive.v3.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Lector_de_Logs
         public Form2()
         {
             InitializeComponent();
+            this.Load += MainForm_Load;
         }
 
         [STAThread]
@@ -22,7 +24,12 @@ namespace Lector_de_Logs
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(new Form2());            
+        }
+
+        private async void MainForm_Load(object sender, EventArgs e)
+        {
+            await ApiDrive.DriveApi();
         }
 
         private void button1_click(object sender, EventArgs e)

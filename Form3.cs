@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+//using System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Lector_de_Logs
 {
@@ -30,7 +30,7 @@ namespace Lector_de_Logs
                     escritor.WriteLine("> ERROR: ");
                 }
                 Escribir("");
-                Escribir($"El archivo 'G_error.mem' se ha creado y escrito exitosamente.");
+                Escribir(string.Format("El archivo 'G_error.mem' se ha creado y escrito exitosamente."));
             }
             if (!File.Exists("G_statement.mem"))
             {
@@ -42,7 +42,7 @@ namespace Lector_de_Logs
                     escritor.WriteLine("> STATEMENT: ");
                 }
                 Escribir("");
-                Escribir($"El archivo 'G_statement.mem' se ha creado y escrito exitosamente.");
+                Escribir(string.Format("El archivo 'G_statement.mem' se ha creado y escrito exitosamente."));
             }
         } //abre la pantala y crea los archivos G_error.mem y G_statement.mem
 
@@ -103,7 +103,7 @@ namespace Lector_de_Logs
                 }
                 catch (Exception ex)
                 {
-                    Escribir($"Error: {ex.Message}");
+                    Escribir(string.Format("Ocurrió un error: {0}",ex.Message));
                 }
 
                 for (i = 0; i < archivos.Length; i++)
@@ -215,23 +215,23 @@ namespace Lector_de_Logs
                 if (archivosTXT.Length == 0)
                 {
                     // Mostrar la cantidad de archivos .txt encontrados
-                    Escribir($"Se encontraron {archivosTXT.Length} archivos {extension} en la carpeta.");
+                    Escribir(string.Format("Se encontraron {0} archivos {1} en la carpeta.",archivosTXT.Length,extension));
                     Escribir("Buscando archivos .log");
                     archivosTXT = Directory.GetFiles(ruta, "*" + ".log");
-                    Escribir($"Se encontraron {archivosTXT.Length} archivos .log en la carpeta.");
+                    Escribir(string.Format("Se encontraron {0} archivos .log en la carpeta.",archivosTXT.Length));
                     return archivosTXT;
                 }
                 else
                 {
                     // Mostrar la cantidad de archivos .txt encontrados
-                    Escribir($"Se encontraron {archivosTXT.Length} archivos {extension} en la carpeta.");
+                    Escribir(string.Format("Se encontraron {0} archivos {1} en la carpeta.",archivosTXT.Length,extension));
                     return archivosTXT;
                 }
 
             }
             catch (Exception ex)
             {
-                Escribir($"Ocurrió un error: {ex.Message}");
+                Escribir(string.Format("Ocurrió un error: {0}",ex.Message));
             }
 
             return archivosTXT;
@@ -462,7 +462,7 @@ namespace Lector_de_Logs
             }
             catch (IOException ex)
             {
-                Escribir($"Error al leer el archivo: {ex.Message}");
+                Escribir(string.Format("Error al leer el archivo: {0}",ex.Message));
             }
 
             return memoria;

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+//using System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 
@@ -84,7 +84,7 @@ namespace Lector_de_Logs
                 }
                 catch (Exception ex)
                 {
-                    Escribir($"Error: {ex.Message}");
+                    Escribir(string.Format("Error: {0}",ex.Message));
                 }
 
                 for (i = 0; i < archivos.Length; i++)
@@ -159,23 +159,23 @@ namespace Lector_de_Logs
                 if (archivosTXT.Length == 0) 
                 {
                     // Mostrar la cantidad de archivos .txt encontrados
-                    Escribir($"Se encontraron {archivosTXT.Length} archivos .txt {extension} en la carpeta.");
+                    Escribir(string.Format("Se encontraron {0} archivos .txt {1} en la carpeta.",archivosTXT.Length,extension));
                     Escribir("Buscando archivos .log");
                     archivosTXT = Directory.GetFiles(ruta, "*" + ".log");
-                    Escribir($"Se encontraron {archivosTXT.Length} archivos .txt {extension} en la carpeta.");
+                    Escribir(string.Format("Se encontraron {0} archivos .txt {1} en la carpeta.",archivosTXT.Length,extension));
                     return archivosTXT;
                 }
                 else
                 {
                     // Mostrar la cantidad de archivos .txt encontrados
-                    Escribir($"Se encontraron {archivosTXT.Length} archivos {extension} en la carpeta.");
+                    Escribir(string.Format("Se encontraron {0} archivos {1} en la carpeta.",archivosTXT.Length,extension));
                     return archivosTXT;
                 }
                 
             }
             catch (Exception ex)
             {
-                Escribir($"Ocurrió un error: {ex.Message}");
+                Escribir(string.Format("Ocurrió un error: {0}",ex.Message));
             }
 
             return archivosTXT;
@@ -417,14 +417,14 @@ namespace Lector_de_Logs
                                                         escritor.WriteLine(ip + "|" + puerto + "|" + BD + "|" + usuario);
                                                         estado = 3;
                                                     }
-                                                    Escribir($"El archivo '{nombre}' se ha creado y escrito exitosamente.");
+                                                    Escribir(string.Format("El archivo '{0}' se ha creado y escrito exitosamente.",nombre));
                                                     hora = (DateTime.Now).TimeOfDay;
                                                     Escribir(hora.ToString());
 
                                                 }
                                                 catch (Exception ex)
                                                 {
-                                                    Escribir($"Ocurrió un error: {ex.Message}");
+                                                    Escribir(string.Format("Ocurrió un error: {0}",ex.Message));
                                                 }
                                                 archivo = 1;
                                                 c++;
@@ -464,7 +464,7 @@ namespace Lector_de_Logs
                                                     }
                                                     catch (Exception ex)
                                                     {
-                                                        Escribir($"Ocurrió un error: {ex.Message}");
+                                                        Escribir(string.Format("Ocurrió un error: {0}",ex.Message));
                                                     }
                                                     c++;
                                                     porcentaje++;
@@ -490,7 +490,7 @@ namespace Lector_de_Logs
             }
             catch (IOException ex)
             {
-                Escribir($"Error al leer el archivo: {ex.Message}");
+                Escribir(string.Format("Error al leer el archivo: {0}",ex.Message));
             }
             t[50000] = t[50000] + c;
             return t;
